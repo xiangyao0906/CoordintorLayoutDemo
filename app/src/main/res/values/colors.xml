@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="navigationBarColor">#f46444</color>
+
+    <color name="colorPrimaryDarkTrans">#CCf57257</color>
+
+    <color name="custom_imoocstyle">#eb4f38</color>
+    <color name="imoocstyle">#CA0612</color>
+
+    <color name="test_spacing1">#9674FC</color>
+    <color name="test_spacing2">#179641</color>
+    <color name="test_spacing3">#B2DB4D</color>
+    <color name="test_spacing4">#50E746</color>
+
+    <color name="srl_blue_bright">#ff00ddff</color>
+    <color name="srl_green_light">#ff99cc00</color>
+    <color name="srl_orange_light">#ffffbb33</color>
+    <color name="srl_red_light">#ffff4444</color>
+    <color name="refresh_color">#f2f2f2</color>
+    <color name="white">#ffffff</color>
+    <color name="white_f7f7f7">#f7f7f7</color>
+    <color name="white_fdfdfe">#fdfdfe</color>
+    <color name="trans_e0e2e2e2">#e0e2e2e2</color>
+    <color name="trans_e6e2e2e2">#e6e2e2e2</color>
+    <color name="black_3d">#3d3d3d</color>
+    <color name="black_ed">#ededed</color>
+    <color name="black_13">#131313</color>
+    <color name="black_d8d8d8">#d8d8d8</color>
+    <color name="black_666666">#666666</color>
+    <color name="black_71">#717171</color>
+    <color name="black_33">#333333</color>
+    <color name="black_22">#222222</color>
+    <color name="black_66">#666666</color>
+    <color name="black_99">#999999</color>
+    <color name="black_72">#727272</color>
+    <color name="black_3d3d3d">#3d3d3d</color>
+    <color name="black_333333">#333333</color>
+    <color name="black_676767">#676767</color>
+    <color name="gay_d1">#d1d3db</color>
+    <color name="tv_gay">#cccccc</color>
+    <color name="tv_blue">#60c5f1</color>
+    <color name="tv_red">#ff5c5c</color>
+    <color name="tv_yellow">#ffa67a</color>
+
+    <color name="tv_yel">#ed6d41</color>
+    <color name="line_yel">#ff8a00</color>
+
+    <color name="theme_app">#06c1ad</color>
+    <color name="gray_909090">#909090</color>
+    <color name="black_1a1a1a">#1a1a1a</color>
+    <color name="black_4d4d4d">#4d4d4d</color>
+    <color name="black_292929">#292929</color>
+    <color name="gray_19000000">#19000000</color>
+    <color name="gray_66000000">#66000000</color>
+    <color name="gray_ededed">#ededed</color>
+    <color name="gray_eeeeee">#eeeeee</color>
+    <color name="gray_686868">#686868</color>
+    <color name="gray_666666">#666666</color>
+    <color name="gray_696969">#696969</color>
+    <color name="gray_828282">#828282</color>
+    <color name="gray_222222">#222222</color>
+    <color name="gray_474747">#474747</color>
+    <color name="green_7fcac0">#7fcac0</color>
+    <color name="green_06c1ad">#06c1ad</color>
+    <color name="gray_e2e2e2">#e2e2e2</color>
+    <color name="gray_d8d8d8">#d8d8d8</color>
+    <color name="gray_dfe4e8">#dfe4e8</color>
+    <color name="gray_777777">#777777</color>
+    <color name="gray_525353">#525353</color>
+    <color name="gray_555555">#555555</color>
+    <color name="gray_e4e4e4">#e4e4e4</color>
+    <color name="gray_999999">#999999</color>
+    <color name="gray_bbbbbb">#bbbbbb</color>
+    <color name="gray_f2f2f2">#f2f2f2</color>
+    <color name="gray_f3f3f3">#f3f3f3</color>
+    <color name="gray_333333">#333333</color>
+    <color name="gray_d4d4d4">#d4d4d4</color>
+    <color name="gray_e5e5e5">#e5e5e5</color>
+    <color name="col_979797">#979797</color>
+    <color name="gray_5b6171">#5b6171</color>
+    <color name="gray_e9e9ea">#e9e9ea</color>
+    <color name="blue_60c6f1">#60c6f1</color>
+    <color name="orange_ffa77a">#ffa77a</color>
+    <color name="orange_f3a466">#f3a466</color>
+    <color name="orange_faf5ec">#faf5ec</color>
+    <color name="orange_f5a628">#f5a628</color>
+    <color name="orange_fcf5e8">#fcf5e8</color>
+    <color name="green_47d995">#47d995</color>
+    <color name="photopicker_background">#181819</color>
+    <color name="background">#FFFFFF</color>
+    <color name="split_line">#11112233</color>
+    <color name="text1">#59B29C</color>
+    <color name="text2">#333333</color>
+    <color name="green_9dd6cf">#9dd6cf</color>
+    <color name="green_3dcfbf">#3dcfbf</color>
+    <color name="gray2_7a7a7a">#7a7a7a</color>
+    <color name="color1">#F0F0F0</color>
+    <color name="color2">#FFFFFF</color>
+    <color name="color3">#B0B0B0</color>
+    <color name="color4">#666666</color>
+    <color name="color5">#57C5E8</color>
+    <color name="black_222222">#222222</color>
+    <color name="green_20c0ad">#20c0ad</color>
+
+    <color name="black_55">#555555</color>
+
+    <color name="tv_gay_c9">#c9c9c9</color>
+
+    <color name="tv_state">#c69a48</color>
+    <color name="bg_state">#ffe3b5</color>
+
+    <color name="gray_6b6b6b">#6b6b6b</color>
+
+    <color name="green_f8">#f0fbfa</color>
+
+    <color name="orange_ff8988">#ff8988</color>
+
+    <color name="yellow_f5a628">#F5A628</color>
+    <color name="col_dedede">#dedede</color>
+    <color name="col_74767C">#74767C</color>
+</resources>
