@@ -1,7 +1,10 @@
 package componetdemo.xiangyao.com.coordintorlayoutdemo.fragment;
 
 
+import android.graphics.Color;
 import android.os.Bundle;
+import android.support.design.widget.AppBarLayout;
+import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
@@ -10,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import com.gyf.barlibrary.ImmersionBar;
+import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
 
@@ -35,6 +39,11 @@ public class HomeFragment extends BaseFragment {
     @BindView(R.id.toolbar)
     Toolbar toolbar;
     Unbinder unbinder;
+    CollapsingToolbarLayout collapsingToolbar;
+    @BindView(R.id.appbar)
+    AppBarLayout appbar;
+    @BindView(R.id.smarRefreshLayout)
+    SmartRefreshLayout smarRefreshLayout;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -61,8 +70,8 @@ public class HomeFragment extends BaseFragment {
 
         List<String> imageUrls = new ArrayList<>();
         imageUrls.add("https://movieplayer.net-cdn.it/images/2018/02/09/mcu-calss-3.jpg");
-        imageUrls.add("https://www.nerdplanet.it/wp-content/uploads/2017/06/Marvel.jpg");
-        imageUrls.add("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMoJZuo1iSB_3daxm6ULrNfh39neginvxUXXMU3ZbSdKw8X-55jg");
+        imageUrls.add("https://movieplayer.net-cdn.it/images/2018/02/09/mcu-calss-3.jpg");
+        imageUrls.add("https://movieplayer.net-cdn.it/images/2018/02/09/mcu-calss-3.jpg");
 
         banner.setImages(imageUrls)
                 .setImageLoader(new MyImageLoadCache())
@@ -75,7 +84,28 @@ public class HomeFragment extends BaseFragment {
     @Override
     protected void initView() {
         super.initView();
+        smarRefreshLayout.setEnableLoadMore(false);
         ImmersionBar.with(this).titleBar(toolbar).init();
+        appbar.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
+            @Override
+            public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
+
+                int i1 = banner.getBottom() - titleLayout.getBottom();
+                int total = 0;
+                total = Math.abs(verticalOffset) + total;
+
+                if (total <= 0) {  //在顶部时完全透明
+                    toolbar.setBackgroundColor(Color.argb(0, 242, 242, 242));
+                } else if (total <= i1) {  //在滑动高度中时，设置透明度百分比（当前高度/总高度）
+                    double d = (double) total / i1;
+                    double alpha = (d * 255);
+                    toolbar.setBackgroundColor(Color.argb((int) alpha, 242, 242, 242));
+                } else { //滑出总高度 完全不透明
+                    toolbar.setBackgroundColor(Color.argb(255, 242, 242, 242));
+                }
+
+            }
+        });
     }
 
     @Override

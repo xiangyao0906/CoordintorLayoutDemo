@@ -33,7 +33,7 @@
                 android:id="@+id/homeImg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@mipmap/ic_tab_strip_icon_feed" />
+                android:background="@mipmap/ic_tab_strip_icon_feed_selected" />
 
 
             <TextView
