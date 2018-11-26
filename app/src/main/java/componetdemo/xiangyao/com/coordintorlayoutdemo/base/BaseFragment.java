@@ -10,8 +10,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.gyf.barlibrary.ImmersionBar;
-
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
@@ -21,7 +19,6 @@ import butterknife.Unbinder;
  * Created by geyifeng on 2017/4/7.
  */
 public abstract class BaseFragment extends Fragment {
-
 
     protected Activity mActivity;
     protected View mRootView;
@@ -35,14 +32,6 @@ public abstract class BaseFragment extends Fragment {
      * 当执行完onViewCreated方法后即为true
      */
     protected boolean mIsPrepare;
-
-    /**
-     * 是否加载完成
-     * 当执行完onViewCreated方法后即为true
-     */
-    protected boolean mIsImmersion;
-
-    protected ImmersionBar mImmersionBar;
     private Unbinder unbinder;
 
     @Override
@@ -64,17 +53,9 @@ public abstract class BaseFragment extends Fragment {
         unbinder = ButterKnife.bind(this, mRootView);
         if (isLazyLoad()) {
             mIsPrepare = true;
-            mIsImmersion = true;
             onLazyLoad();
         } else {
             initData();
-            if (isImmersionBarEnabled())
-                initImmersionBar();
-        }
-        if (view != null) {
-            View statusBarView = view.findViewById(setStatusBarView());
-            if (statusBarView != null)
-                ImmersionBar.setStatusBarView(mActivity, statusBarView);
         }
         initView();
         setListener();
@@ -88,8 +69,6 @@ public abstract class BaseFragment extends Fragment {
     public void onDestroy() {
         super.onDestroy();
         unbinder.unbind();
-        if (mImmersionBar != null)
-            mImmersionBar.destroy();
     }
 
     @Override
@@ -135,9 +114,6 @@ public abstract class BaseFragment extends Fragment {
             mIsPrepare = false;
             initData();
         }
-        if (mIsVisible && mIsImmersion && isImmersionBarEnabled()) {
-            initImmersionBar();
-        }
     }
 
     /**
@@ -152,14 +128,6 @@ public abstract class BaseFragment extends Fragment {
      */
     protected void initData() {
 
-    }
-
-    /**
-     * 初始化沉浸式
-     */
-    protected void initImmersionBar() {
-        mImmersionBar = ImmersionBar.with(mActivity);
-        mImmersionBar.keyboardEnable(true).navigationBarWithKitkatEnable(false).init();
     }
 
     /**

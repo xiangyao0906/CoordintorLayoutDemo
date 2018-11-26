@@ -48,10 +48,12 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
     @Override
     public int getItemPosition(Object object) {
 
-
         return super.getItemPosition(object);
     }
 
+    @Override
+    public void destroyItem(ViewGroup container, int position, Object object) {
+    }
 
     //获取指定位置最后显示的Fragment
     public Fragment getCurrentFragment(int index) {
