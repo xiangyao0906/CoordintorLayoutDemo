@@ -59,7 +59,7 @@ public class HomeSubFragment extends BaseLazyFragment {
         List<String> strings = new ArrayList<>();
 
         for (int i = 0; i < 10; i++) {
-            strings.add("HOMESUB" + i);
+            strings.add("sodagreen" + i);
         }
         CommonAdapter commonAdapter = new CommonAdapter(strings);
         homeRecycleview.setLayoutManager(new LinearLayoutManager(getActivity()));
